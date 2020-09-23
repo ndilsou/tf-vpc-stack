@@ -1,0 +1,5 @@
+include .env
+
+tf-%:
+	terraform $*
+
