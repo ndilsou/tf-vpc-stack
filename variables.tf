@@ -3,7 +3,7 @@ variable "subnets" {
   default = {
     "eu-west-2a" = 1
     "eu-west-2b" = 2
-    "eu-west-3c" = 3
+    "eu-west-2c" = 3
   }
 }
 
@@ -13,8 +13,8 @@ variable "newbits" {
 }
 
 variable "nats" {
-    description = ""
-    default = {
-        "eu-west-2a" = 1
-    }
+  description = ""
+  default = {
+    "eu-west-2a" = 1
+  }
 }
