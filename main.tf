@@ -50,7 +50,7 @@ resource "aws_route_table" "public_route_table" {
 resource "aws_subnet" "public" {
   for_each          = var.subnets
   vpc_id            = aws_vpc.main.id
-  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, 2, each.value)
+  cidr_block        = cidrsubnet(aws_vpc.main.cidr_block, var.newbits, each.value)
   availability_zone = each.key
   tags = {
     Name  = "Public-${each.value}"
